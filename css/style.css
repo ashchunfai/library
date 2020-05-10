@@ -1,9 +1,3 @@
-/* 
-  TODO: Tweak some animations:
-    - Remove the scale animation for the toggle status button (test it with trash can as well)
-    - Test if removing the opacity effect for the buttons is better
- */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
@@ -165,7 +159,7 @@ button:hover {
 }
 
 .book h4 {
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
