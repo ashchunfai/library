@@ -55,11 +55,21 @@ body {
 }
 
 input {
-  width: 400px;
+  min-width: 400px;
   outline: none;
   font-size: 1.2rem;
   padding: 6px;
   border: 1px solid #b2b5b8;
+}
+
+@media screen and (max-width: 520px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  input {
+    min-width: 100%;
+  }
 }
 
 input:focus {
