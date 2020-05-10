@@ -10,12 +10,15 @@
 
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #222831;
   color: #eeeeee;
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .modal {
@@ -240,4 +243,30 @@ svg, path {
   100% {
     transform: translate(0, 0);
   }
+}
+
+.github {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+
+.github p {
+  margin: 0 1rem;
+}
+
+.github a {
+  font-weight: 600;
+  color: #e8f1f5;
+  text-decoration: none;
+}
+
+.github a:hover {
+  opacity: .85;
+  transition: all .3 ease;
 }
