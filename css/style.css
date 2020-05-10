@@ -1,3 +1,9 @@
+/* 
+  TODO: Tweak some animations:
+    - Remove the scale animation for the toggle status button (test it with trash can as well)
+    - Test if removing the opacity effect for the buttons is better
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
@@ -163,12 +169,20 @@ button:hover {
   font-size: 1.5rem;
 }
 
-.book span {
+.book strong {
   font-weight: 600;
 }
 
 .book p {
   margin: .75rem 0 0 0;
+}
+
+.read {
+  color: #1d781d;
+}
+
+.unread {
+  color: #dc2a2a;
 }
 
 .card-bottom {
@@ -180,13 +194,18 @@ button:hover {
   justify-content: space-between;
 }
 
-.card-bottom button {
+.toggle-status-btn  {
   color: #084f8a;
   position: relative;
   padding: .3rem 0;
 }
 
-.card-bottom button:after {
+.toggle-status-btn:hover {
+  opacity: 1;
+  transform: none;
+}
+
+.toggle-status-btn:after {
   position: absolute;
   content: "";
   display: block;
@@ -198,14 +217,13 @@ button:hover {
   width: 50%;
 }
 
-.card-bottom button:hover:after {
+.toggle-status-btn:hover:after {
   width: 100%;
   right: 0;
 }
 
-.card-bottom .trash:hover {
+.trash:hover {
   cursor: pointer;
-  transform: scale(1.05);
   animation: shake 150ms 2 linear;
   transition: all .3s ease;
 }
