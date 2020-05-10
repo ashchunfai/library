@@ -63,6 +63,10 @@ input:focus {
   border: 1px solid #118df0;
 }
 
+.invalid {
+  border: 1px solid #d72323;
+}
+
 label {
   color: #222831;
   opacity: .75;
@@ -220,6 +224,10 @@ button:hover {
   cursor: pointer;
   animation: shake 150ms 2 linear;
   transition: all .3s ease;
+}
+
+svg, path {
+  pointer-events: none;
 }
 
 @keyframes shake {

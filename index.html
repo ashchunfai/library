@@ -12,21 +12,21 @@
     <div class="modal-content">
       <h2>Add New Book</h2>
       <div class="form-control">
-        <input type="text" name="title" id="title" required>
+        <input type="text" name="title" id="title">
         <label for="title">Title</label>
       </div>
       <div class="form-control">
-        <input type="text" name="author" id="author" required>
+        <input type="text" name="author" id="author">
         <label for="author">Author</label>
       </div>
       <div class="form-control">
-        <input type="number" name="pages" id="pages" required>
+        <input type="number" name="pages" id="pages">
         <label for="pages">Pages</label>
       </div>
       <div class="form-control">
         <select name="status" id="status">
-          <option value="read">Read</option>
-          <option value="unread">Unread</option>
+          <option value="Read">Read</option>
+          <option value="Unread">Unread</option>
         </select>
         <label>Status</label>
       </div>
@@ -45,34 +45,9 @@
       <button class="add" id="modal-btn">Add New Book</button>
     </div>
 
-    <div class="books">
-      <div class="book">
-        <div class="info">
-          <h4>Some Title</h4>
-          <p><strong>Author: </strong>Some Author</p>
-          <p><strong>Pages: </strong>123</p>
-          <p class="read"><strong>Status: </strong><span class="reading-status">Read</span></p>
-        </div>
+    <div class="books"></div>
 
-        <p class="card-bottom">
-          <button class="toggle-status-btn">Toggle Status</button>
-          <span class="trash"><i class="fas fa-trash"></i></span>
-        </p>
-      </div>
-      
-      <div class="book">
-        <div class="info">
-          <h4>Some Title</h4>
-          <p><strong>Author: </strong>Some Author</p>
-          <p><strong>Pages: </strong>123</p>
-          <p class="unread"><strong>Status: </strong><span class="reading-status">Unread</span></p>
-        </div>
-
-        <p class="card-bottom">
-          <button class="toggle-status-btn">Toggle Status</button>
-          <span class="trash"><i class="fas fa-trash"></i></span>
-        </p>
-      </div>
+    <h3 class="msg">No books have been addded yet.</h3>
   </div>
 
   <script src="js/script.js"></script>
