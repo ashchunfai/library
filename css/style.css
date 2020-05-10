@@ -118,6 +118,22 @@ h1 {
   justify-content: space-evenly;
 }
 
+.buttons button {
+  margin: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .buttons {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    width: 100%;
+  }
+}
+
 button {
   padding: 1rem 0;
   font-size: 1rem;
