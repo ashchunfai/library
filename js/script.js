@@ -22,11 +22,13 @@ addBtn.addEventListener('click', addBookToLibrary);
 
 clearBtn.addEventListener('click', clearAll);
 
-function Book(title, author, pages, status) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = status;
+class Book {
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
 }
 
 function addBookToLibrary() {
@@ -48,9 +50,9 @@ function addBookToLibrary() {
 
   if (isValid) {
     const book = new Book(inputsArr[0].value, inputsArr[1].value, inputsArr[2].value, status.value);
-    
+
     library.push(book);
-    
+
     save();
     closeModal();
     render();
@@ -70,7 +72,7 @@ function render() {
     bookCard.setAttribute('data-book', index);
 
     // Info section
-    const info = document.createElement('div'); 
+    const info = document.createElement('div');
     const title = document.createElement('h4');
     const author = document.createElement('p');
     const pages = document.createElement('p');
@@ -129,7 +131,7 @@ function toggleStatus(e) {
   const index = e.target.getAttribute('data-status');
   const book = booksContainer.querySelector(`.book[data-book="${index}"]`);
   const statusContainer = book.querySelector('.status');
-  
+
   if (statusContainer.classList.contains('read')) {
     statusContainer.classList.remove('read');
     statusContainer.classList.add('unread');
@@ -150,7 +152,7 @@ function toggleStatus(e) {
 function deleteBook(e) {
   const index = e.target.getAttribute('data-trash');
   library.splice(index, 1);
-  
+
   save();
   render();
 }
